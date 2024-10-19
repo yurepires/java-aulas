@@ -1,4 +1,4 @@
-package aula01;
+package poo.aula02;
 
 public class Cachorro extends Animal{
     // atributos/estado
