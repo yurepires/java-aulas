@@ -1,4 +1,4 @@
-package estruturasdedados.aula03;
+package estruturadedados.aula03;
 
 public class ContaCorrente {
     private float saldo;

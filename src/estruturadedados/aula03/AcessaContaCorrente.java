@@ -1,4 +1,4 @@
-package estruturasdedados.aula03;
+package estruturadedados.aula03;
 
 public class AcessaContaCorrente {
     public static void main(String[] args) {

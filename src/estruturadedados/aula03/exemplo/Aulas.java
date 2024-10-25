@@ -1,4 +1,4 @@
-package estruturasdedados.aula03.exemplo;
+package estruturadedados.aula03.exemplo;
 
 public class Aulas {
 
