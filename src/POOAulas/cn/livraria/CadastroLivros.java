@@ -1,21 +1,22 @@
 package POOAulas.cn.livraria;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class CadastroLivros {
 
-    private List<Livro> livroList;
+    public static void main(String[] args) {
+        Autor autorJava = new Autor("yure","yure@gmail.com","99999");
 
-    public CadastroLivros() {
-        this.livroList = new ArrayList<>();
-    }
+        Livro livroJava = new Livro();
 
-    public void adicionarLivro(String titulo, String descricao ,double preco, int ISBN){
-        livroList.add(new Livro(titulo, descricao, preco, ISBN));
-    }
+        livroJava.setTitulo("Java como Programar");
+        livroJava.setDescricao("Primeiros passos");
+        livroJava.setPreco(39.90);
+        livroJava.setISBN(12345);
+        livroJava.setAutor(autorJava);
 
-    public void removerLivro(String titulo){
-        List<Livro> livrosParaRemover = new ArrayList<>();
+        livroJava.mostrarDetalhes();
+
+        Livro outroLivro = new Livro("Python para iniciantes", "Livro Python básico", 119.90, 12346);
+
+        outroLivro.mostrarDetalhes();
     }
 }

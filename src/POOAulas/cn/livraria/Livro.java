@@ -5,11 +5,25 @@ public class Livro {
     private String descricao;
     private double preco;
     private int ISBN;
+    private Autor autor;
+
+
+    public Livro() {
+    }
 
     public Livro(String titulo, String descricao, double preco, int ISBN) {
         this.titulo = titulo;
+        this.descricao = descricao;
         this.preco = preco;
         this.ISBN = ISBN;
+    }
+
+    public Livro(String titulo, String descricao, double preco, int ISBN, Autor autor) {
+        this.titulo = titulo;
+        this.descricao = descricao;
+        this.preco = preco;
+        this.ISBN = ISBN;
+        this.autor = autor;
     }
 
     public String getTitulo() {
@@ -42,5 +56,34 @@ public class Livro {
 
     public void setISBN(int ISBN) {
         this.ISBN = ISBN;
+    }
+
+    public Autor getAutor() {
+        return autor;
+    }
+
+    public void setAutor(Autor autor) {
+        this.autor = autor;
+    }
+
+    public void mostrarDetalhes(){
+        System.out.println("Detalhes do Livro");
+        System.out.println("Nome: " + this.titulo);
+        System.out.println("Descricao: " + this.descricao);
+        System.out.println("Preço: " + this.preco);
+        System.out.println("ISBN: " + this.ISBN);
+        if (this.autor != null) this.autor.mostrarDetalhes();
+        else System.out.println("Autor não cadastrado!");
+        System.out.println("-----------------------");
+    }
+
+    @Override
+    public String toString() {
+        return "Livro{" +
+                "titulo='" + titulo + '\'' +
+                ", descricao='" + descricao + '\'' +
+                ", preco=" + preco +
+                ", ISBN=" + ISBN +
+                '}';
     }
 }
