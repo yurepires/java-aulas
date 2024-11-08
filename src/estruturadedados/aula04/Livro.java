@@ -10,4 +10,11 @@ public class Livro {
     public String getNome() {
         return nome;
     }
+
+    @Override
+    public String toString() {
+        return "Livro{" +
+                "nome='" + nome + '\'' +
+                '}';
+    }
 }
