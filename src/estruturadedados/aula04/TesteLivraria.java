@@ -12,10 +12,26 @@ public class TesteLivraria {
         };
 
         Livraria livraria = new Livraria(livros.length);
+        for (int i=0; i < livros.length; i++){
+            livraria.adicionarLivro(livros[i]);
+        }
 
         System.out.println(livraria);
-        livraria.removerPrimeiroElemento();
 
+        livraria.removerPrimeiroElemento();
+        System.out.println(livraria);
+
+        livraria.removerPrimeiroElemento();
+        System.out.println(livraria);
+
+        livraria.removerUltimoElemento();
+        System.out.println(livraria);
+
+        livraria.adicionarLivro(new Livro("Ruby"));
+        System.out.println(livraria);
+
+        livraria.adicionarLivro(new Livro("Pascal"));
+        livraria.adicionarLivro(new Livro("Fortran"));
         System.out.println(livraria);
     }
 

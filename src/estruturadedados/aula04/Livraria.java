@@ -6,8 +6,6 @@ public class Livraria {
 
     int size;
 
-    int capacidade = 100;
-
     Livro livros[];
 
     public Livraria(int tam) {
@@ -47,9 +45,7 @@ public class Livraria {
             throw new RuntimeException("Lista vazia");
         }
         String nomeLivroRemovido = livros[0].getNome();
-        livros[0] = null;
-        size--;
-        for (int i=1; i < size; i++){
+        for (int i=0; i < size - 1; i++){
             livros[i] = livros[i + 1];
         }
         removerUltimoElemento();
@@ -60,7 +56,6 @@ public class Livraria {
     public String toString() {
         return "Livraria{" +
                 "size=" + size +
-                ", capacidade=" + capacidade +
                 ", livros=" + Arrays.toString(livros) +
                 '}';
     }
