@@ -25,6 +25,12 @@ public class Livraria {
         livros[size++] = livro;
     }
 
+    public void adicionarTodos(Livro[] livros){
+        for (int i=0; i < livros.length; i++){
+            adicionarLivro(livros[i]);
+        }
+    }
+
     public Livro buscarLivro(String nome) throws RuntimeException{
         if (isEmpty()) throw new RuntimeException("Não há livros!");
         for (Livro l: livros) if (l.getNome().equalsIgnoreCase(nome)) return l;

@@ -3,7 +3,7 @@ package estruturadedados.aula04;
 public class TesteLivraria {
 
     public static void main(String[] args) {
-        Livro livros[] = {
+        Livro[] livros = {
                 new Livro("Python"),
                 new Livro("Java"),
                 new Livro("C#"),
@@ -12,9 +12,8 @@ public class TesteLivraria {
         };
 
         Livraria livraria = new Livraria(livros.length);
-        for (int i=0; i < livros.length; i++){
-            livraria.adicionarLivro(livros[i]);
-        }
+
+        livraria.adicionarTodos(livros);
 
         System.out.println(livraria);
 

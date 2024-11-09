@@ -3,6 +3,9 @@ package estruturadedados.aula04;
 public class Livro {
     private String nome;
 
+    public Livro() {
+    }
+
     public Livro(String nome) {
         this.nome = nome;
     }
