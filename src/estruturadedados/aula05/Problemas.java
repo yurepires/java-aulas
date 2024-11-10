@@ -3,7 +3,7 @@ package estruturadedados.aula05;
 public class Problemas {
 
     public static void main(String[] args) {
-        problema7();
+        problema8();
     }
 
     public static void problema1(){
@@ -73,6 +73,22 @@ public class Problemas {
         for (int i=0; i < m.length; i++){
             for (int j = 0; j < m.length - i; j++){
                 System.out.printf("%d ", m[j][i]);
+            }
+            System.out.println();
+        }
+    }
+
+    public static void problema8(){
+        int[][] c = {{1,2}, {3,4}, {5, 6}};
+        int[][] cTransversal = new int[2][3];
+        for (int i=0; i < c.length; i++){
+            for (int j = 0; j < c[i].length; j++){
+                cTransversal[j][i] = c[i][j];
+            }
+        }
+        for (int i=0; i < cTransversal.length; i++){
+            for (int j = 0; j < cTransversal[i].length; j++){
+                System.out.print(cTransversal[i][j] + " ");
             }
             System.out.println();
         }
