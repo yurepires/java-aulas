@@ -4,21 +4,25 @@ public class Livro {
     private String titulo;
     private String descricao;
     private double preco;
-    private int ISBN;
+    private String ISBN;
     private Autor autor;
 
 
-    public Livro() {
+    private Livro() {
     }
 
-    public Livro(String titulo, String descricao, double preco, int ISBN) {
+    public Livro(String ISBN){
+        this.ISBN = ISBN;
+    }
+
+    public Livro(String titulo, String descricao, double preco, String ISBN) {
         this.titulo = titulo;
         this.descricao = descricao;
         this.preco = preco;
         this.ISBN = ISBN;
     }
 
-    public Livro(String titulo, String descricao, double preco, int ISBN, Autor autor) {
+    public Livro(String titulo, String descricao, double preco, String ISBN, Autor autor) {
         this.titulo = titulo;
         this.descricao = descricao;
         this.preco = preco;
@@ -50,11 +54,11 @@ public class Livro {
         this.preco = preco;
     }
 
-    public int getISBN() {
+    public String getISBN() {
         return ISBN;
     }
 
-    public void setISBN(int ISBN) {
+    public void setISBN(String ISBN) {
         this.ISBN = ISBN;
     }
 
