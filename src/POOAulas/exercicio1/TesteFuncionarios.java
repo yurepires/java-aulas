@@ -25,7 +25,15 @@ public class TesteFuncionarios {
         System.out.println(fComissionado1.calcularSalario());
         System.out.println(fHorista1.calcularSalario());
 
+        empresa.exibirFuncionarios();
+
         System.out.println(empresa.valorSalarialTotal());
+    }
+
+    public void exibirFuncionarios(){
+        for (Funcionario funcionario : funcionarioList){
+            System.out.println(funcionario);
+        }
     }
 
     public double valorSalarialTotal(){
