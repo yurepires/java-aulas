@@ -22,7 +22,9 @@ public class SimpleList {
 
     public void insertFirst(String data){
         Node newNode = new Node(data);
+        Node temp = head;
         head = newNode;
+        head.next = temp;
         size++;
     }
 
