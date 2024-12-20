@@ -7,19 +7,19 @@ public class Funcionario {
     private int id;
     private String nome;
     private String especialidade;
-    private boolean cuidandoAnimal;
 
     public Funcionario(String nome, String especialidade) {
         this.nome = nome;
         this.especialidade = especialidade;
         this.id = contador_id++;
-        this.cuidandoAnimal = false;
     }
 
-    public void cuidarAnimal(Animal animal){
-        System.out.printf("Funcionário %s está cuidando do animal %s", this.nome, animal.getNome());
-        this.cuidandoAnimal = true;
-        animal.setSendoCuidado(true);
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -38,11 +38,8 @@ public class Funcionario {
         this.especialidade = especialidade;
     }
 
-    public boolean isCuidandoAnimal() {
-        return cuidandoAnimal;
-    }
-
-    public void setCuidandoAnimal(boolean cuidandoAnimal) {
-        this.cuidandoAnimal = cuidandoAnimal;
+    public void cuidarAnimal(Animal animal){
+        System.out.printf("Funcionário %s está cuidando do animal %s\n", this.nome, animal.getNome());
+        animal.setSendoCuidado(true);
     }
 }

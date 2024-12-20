@@ -3,8 +3,8 @@ package POOAulas.zoologico.animais;
 public class Mamifero extends Animal{
     private int tempoGestacao;
 
-    public Mamifero(String nome, String especie, int tempoGestacao) {
-        super(nome, especie);
+    public Mamifero(String nome, String grupo, int tempoGestacao) {
+        super(nome, grupo);
         this.tempoGestacao = tempoGestacao;
     }
 

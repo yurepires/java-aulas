@@ -2,16 +2,22 @@ package POOAulas.zoologico.animais;
 
 public abstract class Animal {
     static private int contador_id = 1;
-    private int id;
+    static private int totalAnimais = 0;
+    private final int id;
     private String nome;
-    private String especie;
+    private String grupo;
     private boolean sendoCuidado;
 
     public Animal(String nome, String especie) {
         this.nome = nome;
-        this.especie = especie;
+        this.grupo = especie;
         this.id = contador_id++;
         this.sendoCuidado = false;
+        totalAnimais++;
+    }
+
+    public static int getTotalAnimais() {
+        return totalAnimais;
     }
 
     public int getId() {
@@ -26,12 +32,12 @@ public abstract class Animal {
         this.nome = nome;
     }
 
-    public String getEspecie() {
-        return especie;
+    public String getGrupo() {
+        return grupo;
     }
 
-    public void setEspecie(String especie) {
-        this.especie = especie;
+    public void setGrupo(String grupo) {
+        this.grupo = grupo;
     }
 
     public boolean isSendoCuidado() {
